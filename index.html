@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/misnotas.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($){
+        $("#formulario").validate();
+      });
+    </script>
+
+  </head>
+  <body >
+    <div id="cabecera" align="center" >
+       <H1 id="encabezado">Registro de Estudiantes</H1>
+    </div>
+    <div id="div" align="center">
+        
+        
+      <form id="formulario" >
+        <fieldset id="campos">
+          <h2 id="texto">Ingresar Datos</h2>
+          <label id="itemlabel0" for="id" hidden="true">Id:</label>
+          
+          <input id="id" class="required" type="text" hidden="true" disabled/>
+          
+          <label id="itemlabel1" for="Nombre">Codigo:</label>
+          <br>
+          <input id="codigo"  type="text" class="required"/>
+          <br><br>
+          <label id="itemlabel2" for="Codigo">Nombre:</label>
+          <br>
+          <input id="nombre"  type="text" class="required"/>
+          <br><br>
+          <label id="itemlabel3" for="Nota">Nota:</label>
+          <br>
+          <input id="nota"  type="number" min=0 max=20 step=1 class="required"/>
+          <br><br><br>
+        </fieldset>
+        <br>
+        <input id="registro" type="submit" value="Registrar Estudiante"/>
+      </form> 
+      <br>     
+             
+          <button id="prom">Mostrar Promedio</button>
+          <button id="mayor">Mostrar Nota Mayor</button>   
+          <button id="menor">Mostrar Nota Menor</button>
+
+          
+        <p id="resultado">Resultado=?</p>
+        
+        <h1 id="listado">Listado de Estudiantes</h1>
+
+        <table id="tabla-registro" border="6">
+          <thead>
+            <tr>
+              <th hidden="true">ID</th>
+              <th>CODIGO</th>
+              <th>NOMBRE</th>
+              <th>NOTA</th>
+              <th>EDITAR</th>
+              <th>ELIMINAR</th>
+            </tr>
+          </thead>
+          <tbody id="tablaalumno">
+            
+          </tbody>
+        </table>  
+          
+    </div>
+  </body>
+</html>
